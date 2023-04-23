@@ -31,7 +31,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #E60d1117
-background-alt = #44
+background-alt = #800d1117
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
@@ -184,7 +184,7 @@ label-urgent-padding = 2
 
 [module/powermenu]
 type = custom/script
-click-left = "$HOME/.rofi/powermenu.sh" &
+click-left = "$HOME/.config/rofi/powermenu.sh" &
 exec = echo "⏻" 
 
 
@@ -318,7 +318,7 @@ ramp-volume-1 =  
 ramp-volume-2 =  󰕾
 ; ramp-volume-3 = 
 
-click-right = pavucontrol
+click-right = $HOME/.config/polybar/soundcontrol.sh & 
 
 
 ; bar-volume-width = 10

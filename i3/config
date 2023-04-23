@@ -185,9 +185,8 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-default_border none
-default_floating_border none
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
+
 
 # Set startup terminal to workspace 3
 assign [title="^startup-term$"] $ws3
@@ -195,6 +194,8 @@ assign [title="^startup-term$"] $ws3
 # start vscode
 bindsym $mod+c exec code
 
+# open powermenu
+bindsym $mod+p exec $HOME/.config/rofi/powermenu.sh &
 
 # Startup scripts
 
@@ -204,14 +205,27 @@ exec --no-startup-id alacritty --title startup-term
 
 exec --no-startup-id nitrogen --restore &
 
+exec --no-startup-id setxkbmap -option ctrl:nocaps
+exec --no-startup-id xcape -e 'Control_L=Escape'
+
 # Allow gtk themes to be changed in gnome-tweaks
 exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 
 # Start Compton
-exec_always --no-startup-id pkill compton && compton -b
+exec_always --no-startup-id compton -b 
 
 # Uses feh to set wallpaper but currently using nitrogen instead
 # exec_always feh --bg-fill ~/Pictures/wp4565524-mountainscape-wallpapers.jpg
 
 # Polybar Launch script
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+
+
+
+
+
+
+
+
+
