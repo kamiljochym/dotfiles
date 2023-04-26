@@ -197,6 +197,9 @@ bindsym $mod+c exec code
 # open powermenu
 bindsym $mod+p exec $HOME/.config/rofi/powermenu.sh &
 
+# start Spotify
+bindsym $mod+m exec spotify
+
 # Startup scripts
 
 exec --no-startup-id i3-msg 'workspace 1; exec google-chrome;'
@@ -206,6 +209,7 @@ exec --no-startup-id alacritty --title startup-term
 exec --no-startup-id nitrogen --restore &
 
 exec --no-startup-id setxkbmap -option ctrl:nocaps
+
 exec --no-startup-id xcape -e 'Control_L=Escape'
 
 # Allow gtk themes to be changed in gnome-tweaks
@@ -219,13 +223,4 @@ exec_always --no-startup-id compton -b
 
 # Polybar Launch script
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-
-
-
-
-
-
-
-
 
