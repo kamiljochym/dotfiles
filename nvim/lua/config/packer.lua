@@ -15,7 +15,7 @@ return require("packer").startup(function(use)
 
 	use({
 		"projekt0n/github-nvim-theme",
-		tag = "v0.0.7",
+		branch = "0.0.x",
 		-- or                            branch = '0.0.x'
 		config = function()
 			require("github-theme").setup({
@@ -49,6 +49,7 @@ return require("packer").startup(function(use)
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v2.x",
+
 		requires = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" }, -- Required
@@ -68,6 +69,7 @@ return require("packer").startup(function(use)
 		},
 	})
 	use("jose-elias-alvarez/null-ls.nvim")
+	use("jay-babu/mason-null-ls.nvim")
 
 	use("vim-airline/vim-airline")
 	use("vim-airline/vim-airline-themes")
