@@ -16,13 +16,28 @@ return require("packer").startup(function(use)
 	use({
 		"projekt0n/github-nvim-theme",
 		branch = "0.0.x",
+		-- version = "v0.0.7",
 		-- or                            branch = '0.0.x'
 		config = function()
 			require("github-theme").setup({
 				-- ...
 			})
 
-			vim.cmd("colorscheme github_dark_default")
+			vim.cmd("colorscheme github_dark")
+		end,
+	})
+
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+		after = "github-nvim-theme",
+		config = function()
+			require("lualine").setup({
+				options = {
+					theme = "auto", -- or you can assign github themes individually.
+					-- ... your lualine config
+				},
+			})
 		end,
 	})
 
@@ -33,18 +48,6 @@ return require("packer").startup(function(use)
 	use("mbbill/undotree")
 
 	use("tpope/vim-fugitive")
-
-	use({
-		"folke/trouble.nvim",
-		requires = "nvim-tree/nvim-web-devicons",
-		config = function()
-			require("trouble").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
-		end,
-	})
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
@@ -71,6 +74,18 @@ return require("packer").startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jay-babu/mason-null-ls.nvim")
 
-	use("vim-airline/vim-airline")
-	use("vim-airline/vim-airline-themes")
+	use("norcalli/nvim-colorizer.lua")
+
+	-- auto brackets
+	use("windwp/nvim-autopairs")
+
+	-- sidebar nvim tree?
+	use("nvim-tree/nvim-tree.lua")
+	use("nvim-tree/nvim-web-devicons")
+
+	-- comments
+	use("tpope/vim-commentary")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+	-- trouble
+	-- startup screen
 end)

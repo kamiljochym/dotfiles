@@ -62,41 +62,81 @@
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-window:
-  opacity: 1
+# window:
+#   opacity: 1
+#
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x0d1117'
+#     foreground: '0xb3b1ad'
+#
+#   # Normal colors
+#   normal:
+#     black: '0x484f58'
+#     red: '0xff7b72'
+#     green: '0x3fb950'
+#     yellow: '0xd29922'
+#     blue: '0x58a6ff'
+#     magenta: '0xbc8cff'
+#     cyan: '0x39c5cf'
+#     white: '0xb3b1ad'
+#
+#   # Bright colors
+#   bright:
+#     black: '0x6e7681'
+#     red: '0xffa198'
+#     green: '0x56d364'
+#     yellow: '0xe3b341'
+#     blue: '0x79c0ff'
+#     magenta: '0xd2a8ff'
+#     cyan: '0x39c5cf'
+#     white: '0xb3b1ad'
+#
+#   indexed_colors:
+#     - {index: 16, color: '0xd18616'}
+#     - {index: 17, color: '0xffa198'}
+# theme: github_dark_default
+#
+#
 
+# github dark Alacritty Colors
 colors:
   # Default colors
   primary:
-    background: '0x0d1117'
-    foreground: '0xb3b1ad'
+    background: '0x24292e'
+    foreground:
+      '0xd1d5da'
+      #primary:
+      #  background: '0x0d1117'
+      #  foreground: '0xb3b1ad'
 
   # Normal colors
   normal:
-    black: '0x484f58'
-    red: '0xff7b72'
-    green: '0x3fb950'
-    yellow: '0xd29922'
+    black: '0x586069'
+    red: '0xea4a5a'
+    green: '0x34d058'
+    yellow: '0xffea7f'
     blue: '0x58a6ff'
-    magenta: '0xbc8cff'
+    #blue: '0x2188ff'
+    magenta: '0xb392f0'
     cyan: '0x39c5cf'
-    white: '0xb3b1ad'
+    white: '0xd1d5da'
 
   # Bright colors
   bright:
-    black: '0x6e7681'
-    red: '0xffa198'
-    green: '0x56d364'
-    yellow: '0xe3b341'
+    black: '0x959da5'
+    red: '0xf97583'
+    green: '0x85e89d'
+    yellow: '0xffea7f'
     blue: '0x79c0ff'
-    magenta: '0xd2a8ff'
-    cyan: '0x39c5cf'
-    white: '0xb3b1ad'
+    magenta: '0xb392f0'
+    cyan: '0x56d4dd'
+    white: '0xfafbfc'
 
   indexed_colors:
-    - {index: 16, color: '0xd18616'}
-    - {index: 17, color: '0xffa198'}
-theme: github_dark_default
+    - { index: 16, color: '0xd18616' }
+    - { index: 17, color: '0xf97583' }
 # Startup Mode (changes require restart)
 #
 # Values for `startup_mode`:
@@ -140,18 +180,18 @@ theme: github_dark_default
 # Scrolling distance multiplier.
 #multiplier: 3
 # Font configuration
-#font:
-# Normal (roman) font face
-#normal:
-# Font family
-#
-# Default:
-#   - (macOS) Menlo
-#   - (Linux/BSD) monospace
-#   - (Windows) Consolas
-#family: monospace
-# The `style` can be specified to pick a specific face.
-#style: Regular
+font:
+  # Normal (roman) font face
+  normal:
+    # Font family
+    #
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux/BSD) monospace
+    #   - (Windows) Consolas
+    family: Hack Nerd Font Mono
+    # The `style` can be specified to pick a specific face.
+    style: Regular
 # Bold font face
 #bold:
 # Font family
