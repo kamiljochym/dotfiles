@@ -17,6 +17,8 @@ lsp.configure("lua_ls", {
 		},
 	},
 })
+-- init.lua
+require("lspconfig").jdtls.setup({})
 
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }

@@ -103,13 +103,13 @@
 # github dark Alacritty Colors
 colors:
   # Default colors
+  # primary:
+  #   background: '0x24292e'
+  #   foreground:
+  #     '0xd1d5da'
   primary:
-    background: '0x24292e'
-    foreground:
-      '0xd1d5da'
-      #primary:
-      #  background: '0x0d1117'
-      #  foreground: '0xb3b1ad'
+    background: '0x0d1117'
+    foreground: '0xb3b1ad'
 
   # Normal colors
   normal:
@@ -192,6 +192,7 @@ font:
     family: Hack Nerd Font Mono
     # The `style` can be specified to pick a specific face.
     style: Regular
+  size: 13
 # Bold font face
 #bold:
 # Font family

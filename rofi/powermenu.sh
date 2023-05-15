@@ -23,7 +23,7 @@ run_cmd() {
 				reboot
 				;;
 			--shutdown)
-				shutdown 0
+				shutdown
 				;;
 		esac
 	else

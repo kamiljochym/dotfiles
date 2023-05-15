@@ -5,4 +5,11 @@ require("nvim-tree").setup({
 	view = {
 		side = "right",
 	},
+
+	filters = {
+		dotfiles = false,
+	},
+	git = {
+		ignore = false,
+	},
 })

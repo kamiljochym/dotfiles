@@ -23,7 +23,7 @@ return require("packer").startup(function(use)
 				-- ...
 			})
 
-			vim.cmd("colorscheme github_dark")
+			vim.cmd("colorscheme github_dark_default")
 		end,
 	})
 
@@ -44,6 +44,7 @@ return require("packer").startup(function(use)
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
 	use("theprimeagen/harpoon")
+	use("thePrimeagen/vim-be-good")
 
 	use("mbbill/undotree")
 
@@ -71,6 +72,8 @@ return require("packer").startup(function(use)
 			{ "L3MON4D3/LuaSnip" }, -- Required
 		},
 	})
+	-- Java lsp
+	use("mfussenegger/nvim-jdtls")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jay-babu/mason-null-ls.nvim")
 
